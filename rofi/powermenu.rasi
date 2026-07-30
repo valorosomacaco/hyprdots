@@ -1,0 +1,30 @@
+@import "colors.rasi"
+@import "~/.config/rofi/config.rasi"
+
+mainbox {
+    children: [ listview ];
+}
+
+window {
+    width: 15%;
+    padding: 15px;
+    border-radius: 32px;
+}
+
+listview {
+    lines: 5;
+    cycle: false;
+    spacing: 8px;
+    dynamic: false;
+    fixed-height: true;
+}
+
+element {
+    padding: 10px 20px;
+    border-radius: 999px;
+    children: [ element-text ];
+}
+
+element-text {
+    horizontal-align: 0.0;
+}

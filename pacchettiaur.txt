@@ -1,0 +1,10 @@
+hakuneko-desktop-nightly
+hakuneko-desktop-nightly-debug
+kindlegen
+kindlegen-debug
+qqc2-desktop-style5
+qqc2-desktop-style5-debug
+qt5ct-kde
+qt5ct-kde-debug
+yay-bin
+yay-bin-debug
