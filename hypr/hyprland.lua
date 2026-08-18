@@ -159,7 +159,6 @@ hl.config({
     },
 })
 
-disable_splash_rendering = true
 
 --hl.layer_rule({ match = { namespace = "rofi" }, blur = true })
 --hl.layer_rule({ match = { namespace = "waybar" }, blur = true })
@@ -364,6 +363,7 @@ hl.config({
 hl.config({
     misc = {
         force_default_wallpaper = 0,    -- Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_splash_rendering = true,
         disable_hyprland_logo   = true, -- If true disables the random hyprland logo / anime girl background. :(
     },
 })
