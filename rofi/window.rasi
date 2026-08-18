@@ -2,7 +2,7 @@
 
 * {
     modi: "window";
-    font: "Google Sans Flex 16px";
+    font: "Iosevka Nerd Font 16px";
     display-window: "";
 }
 
@@ -12,7 +12,7 @@ window {
     width: 15%;
     border: 1px;
     border-color: @outline-variant;
-    border-radius: 32px;
+    border-radius: 0px;
     background-color: @surface-container;
     padding: 15px;
 }
@@ -25,7 +25,7 @@ mainbox {
 
 inputbar {
     background-color: @surface-container-highest;
-    border-radius: 999px;
+    border-radius: 0px;
     padding: 8px 14px;
     spacing: 10px;
     children: [ entry ];
@@ -62,7 +62,7 @@ element {
     orientation: horizontal;
     children: [ element-icon, element-text ];
     background-color: @surface-container-high;
-    border-radius: 999px;
+    border-radius: 0px;
     padding: 8px 12px;
     margin: 0;
     spacing: 10px;
@@ -84,28 +84,26 @@ element-text {
 }
 
 element normal.normal {
-    background-color: @surface-container-high;
+    background-color: transparent;
     text-color: @on-surface-variant;
 }
 
 element alternate.normal {
-    background-color: @surface-container-high;
+    background-color: transparent;
     text-color: @on-surface-variant;
 }
 
 element selected.normal {
-    background-color: @primary;
-    text-color: @on-primary;
+    text-color: @primary;
 }
 
 element normal.active {
-    background-color: @primary-dim;
+    background-color: transparent;
     text-color: @on-primary-dim;
 }
 
 element selected.active {
-    background-color: @primary;
-    text-color: @on-primary;
+    text-color: @primary;
 }
 
 element normal.urgent,

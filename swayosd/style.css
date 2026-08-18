@@ -1,0 +1,8 @@
+@import url("file:///home/ale/.config/waybar/colors.css");
+window#osd {
+    border-radius: 0;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
+    /* Add other styling properties as needed */
+}
+

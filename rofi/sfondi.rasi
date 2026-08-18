@@ -1,16 +1,16 @@
 @import "colors.rasi"
 
 * {
-    font: "Google Sans Flex 16px";
+    font: "Iosevka Nerd Font 16px";
 }
 
 window {
     location: center;
     anchor: center;
-    width: 58%;
+    width: 750px;
     border: 1px;
     border-color: @outline-variant;
-    border-radius: 32px;
+    border-radius: 0px;
     background-color: @surface-container;
     padding: 15px;
 }
@@ -23,7 +23,7 @@ mainbox {
 
 inputbar {
     background-color: @surface-container-highest;
-    border-radius: 999px;
+    border-radius: 0px;
     padding: 8px 14px;
     spacing: 10px;
     children: [ entry ];
@@ -49,7 +49,7 @@ listview {
     spacing: 10px;
     layout: vertical;
     columns: 3;
-    lines: 1;
+    lines: 3;
     cycle: false;
     dynamic: true;
     fixed-height: true;
@@ -60,7 +60,7 @@ element {
     orientation: vertical;
     children: [ element-icon, element-text ];
     background-color: @surface-container-high;
-    border-radius: 32px;
+    border-radius: 0px;
     padding: 8px 12px;
     margin: 0;
     spacing: 10px;
@@ -69,7 +69,7 @@ element {
 
 element-icon {
     background-color: transparent;
-    size: 400px;
+    size: 100px;
     horizontal-align: 0.5;
     vertical-align: 0.5;
 }
@@ -84,18 +84,17 @@ element-text {
 }
 
 element normal.normal {
-    background-color: @surface-container-high;
+    background-color: transparent;
     text-color: @on-surface-variant;
 }
 
 element alternate.normal {
-    background-color: @surface-container-high;
+    background-color: transparent;
     text-color: @on-surface-variant;
 }
 
 element selected.normal {
-    background-color: @primary;
-    text-color: @on-primary;
+    text-color: @primary;
 }
 
 element normal.active {

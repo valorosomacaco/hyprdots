@@ -2,53 +2,46 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 32, // Waybar height (to be removed for auto height)
-    "margin-top": 5,
-    "margin-left": 5,
-    "margin-right": 5,
+    "height": 35, // Waybar height (to be removed for auto height)
+    //"margin-top": 5,
+    //"margin-left": 5,
+    //"margin-right": 5,
     //"width": 1280, // Waybar width
     //"spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-	    "custom/power",
-	    "hyprland/window"
+        "custom/power",
+        "hyprland/workspaces",
+        "hyprland/window"
     ],
     "modules-center": [
-	"privacy",
-	"hyprland/workspaces",
-        "group/clocko",
-	"battery",
-	"group/rogo"
+        "group/clocko"
     ],
     "modules-right": [
-	"tray",
-	"group/netciao",
-	"custom/notification"
+        "privacy",
+        "tray",
+        "battery",
+        "pulseaudio",
+        "group/netciao",
+        "custom/notification"
     ],
     // Modules configuration
-     "hyprland/workspaces": {
-         "disable-scroll": true,
-         "all-outputs": true,
-         "warp-on-scroll": false,
-         "format": "{name}",
-         "format-icons": {
-             "1": "",
-             "2": "",
-             "3": "",
-             "4": "",
-             "5": "",
-             "urgent": "",
-             "focused": "",
-             "default": ""
-         },
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
+        "format-icons": {
+            "active": ""
+        },
 
-	 "persistent-workspaces": {
-		"*": 9 // 5 workspaces by default on every monitor
-	}
-     },
+    "persistent-workspaces": {
+        "*": 5 // 5 workspaces by default on every monitor
+    }
+    },
 "hyprland/window": {
-	"format": "{title}",
-	"max-length": 50
+    "format": "{title}",
+    "max-length": 30
 },
 
     "keyboard-state": {
@@ -104,7 +97,7 @@
         }
     },
     "tray": {
-        "icon-size": 18,
+        "icon-size": 16,
         "spacing": 10,
         // "icons": {
         //   "blueman": "bluetooth",
@@ -114,8 +107,8 @@
 
     "clock": {
         // "timezone": "America/New_York",
-	"format": "{:%H:%M  |  %a, %d %b}",
-	"on-click": "gnome-calendar",
+    "format": "{:%a %d %b %H:%M}",
+    "on-click": "merkuro-calendar",
         "tooltip-format": "<tt><big>{calendar}</big></tt>"
     },
 
@@ -136,8 +129,8 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}%  {icon}",
-	"tooltip-format": "Brightness: {percent}%",
+        "format": "{icon}",
+    "tooltip-format": "Brightness: {percent}%",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
@@ -146,12 +139,12 @@
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}%  {icon}",
-	"on-click": "kcmshell6 kcm_energyinfo",
+        "format": "{icon}",
+    "on-click": "kcmshell6 kcm_energyinfo",
         "format-full": "{icon}",
-	"tooltip-format": "Battery: {capacity}%\n{timeTo}",
-        "format-charging": "{capacity}%  󰃨",
-        "format-plugged": "{capacity}%  ",
+    "tooltip-format": "Battery: {capacity}%\n{timeTo}",
+        "format-charging": "󰃨",
+        "format-plugged": "",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""]
@@ -160,34 +153,34 @@
         "bat": "BAT2"
     },
     "power-profiles-daemon": {
-      "format": "{icon}",
-      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
-      "tooltip": true,
-      "format-icons": {
+    "format": "{icon}",
+    "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+    "tooltip": true,
+    "format-icons": {
         "default": "",
         "performance": "",
         "balanced": "",
         "power-saver": ""
-      }
+    }
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{icon}",
-	"format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
         "format-ethernet": "󰊗",
-	"tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
+    "tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
         "format-linked": "{ifname} (No IP) 󰊗",
-	"on-click": "kcmshell6 kcm_networkmanagement",
+    "on-click": "kcmshell6 kcm_networkmanagement",
         "format-disconnected": "󰤭"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}%  {icon}",
-	"tooltip-format": "{desc}\nVolume: {volume}%",
-        "format-bluetooth": "{volume}%  ",
+        "format": "{icon}",
+    "tooltip-format": "{desc}\nVolume: {volume}%",
+        "format-bluetooth": "",
         "format-bluetooth-muted": " ",
         "format-muted": "",
-        "format-source": "{volume}%  ",
+        "format-source": "",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -214,75 +207,75 @@
     },
 
     "group/powera": {
-		"orientation": "horizontal",
-		"modules": [
-	"custom/power",
+        "orientation": "horizontal",
+        "modules": [
+    "custom/power",
         "hyprland/workspaces",
-	"privacy"
-		]
-	},
+    "privacy"
+        ]
+    },
     
     "group/clocko": {
-		"orientation": "horizontal",
-		"modules": [
-	"clock"
-		]
-	},
-	"group/netciao": {
-		"orientation": "horizontal",
-		 "drawer": {
+        "orientation": "horizontal",
+        "modules": [
+    "clock"
+        ]
+    },
+    "group/netciao": {
+        "orientation": "horizontal",
+        "drawer": {
         "transition-duration": 500,
         "children-class": "not-power",
         "transition-left-to-right": false
     },
-		"modules": [
-			"network",
-			"idle_inhibitor",
-			"power-profiles-daemon",
-			"bluetooth"
-		]
-	},
-	
-	"group/rogo": {
-		"orientation": "horizontal",
-		 "drawer": {
+        "modules": [
+            "network",
+            "backlight",
+            "idle_inhibitor",
+            "power-profiles-daemon",
+            "bluetooth"
+        ]
+    },
+
+    "group/rogo": {
+        "orientation": "horizontal",
+        "drawer": {
         "transition-duration": 500,
         "children-class": "not-power",
         "transition-left-to-right": true
     },
-		"modules": [
-			"pulseaudio",
-			"backlight"
-		]
-	},
+        "modules": [
+            "pulseaudio"
+        ]
+    },
 
 "bluetooth": {
-	"format": "{}",
-	"on-click": "kcmshell6 kcm_bluetooth",
+    "format": "{}",
+    "on-click": "kcmshell6 kcm_bluetooth",
         "format-on": "󰂰",
         "format-off": "󰂲",
         "format-disabled": "󰂲",
-	"format-connected": "",
-	"format-connected-battery": "",
-	// "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-	"tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\t{status}",
-	"tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-	"tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-	"tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
+    "format-connected": "",
+    "format-connected-battery": "",
+    // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+    "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\t{status}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%"
 },
 
-  "custom/notification": {
+"custom/notification": {
     "tooltip": true,
     "format": "{icon}",
     "format-icons": {
-      "notification": "󱅫 ",
-      "none": "󰂜 ",
-      "dnd-notification": "󰂠 ",
-      "dnd-none": "󰪓 ",
-      "inhibited-notification": "󰂛 ",
-      "inhibited-none": "󰪑 ",
-      "dnd-inhibited-notification": "󰂛 ",
-      "dnd-inhibited-none": "󰪑 "
+    "notification": "󱅫 ",
+    "none": "󰂜 ",
+    "dnd-notification": "󰂠 ",
+    "dnd-none": "󰪓 ",
+    "inhibited-notification": "󰂛 ",
+    "inhibited-none": "󰪑 ",
+    "dnd-inhibited-notification": "󰂛 ",
+    "dnd-inhibited-none": "󰪑 "
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
@@ -290,58 +283,58 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
-  },
+},
 
-  "custom/power": {
-	"format": "󰣇",
-	"tooltip": false,
-	"on-click":"~/Scripts/rofi.sh"
+"custom/power": {
+    "format": "󰣇",
+    "tooltip": false,
+    "on-click":"~/Scripts/rofi.sh"
 },
 
 "privacy": {
-	"icon-spacing": 4,
-	"icon-size": 18,
-	"transition-duration": 250,
-	"modules": [
-		{
-			"type": "screenshare",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		},
-		{
-			"type": "audio-out",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		},
-		{
-			"type": "audio-in",
-			"tooltip": true,
-			"tooltip-icon-size": 24
-		}
-	],
-	"ignore-monitor": true,
-	"ignore": [
-		{
-			"type": "audio-in",
-			"name": "cava"
-		},
-		{
-			"type": "screenshare",
-			"name": "obs"
-		}
-	]
+    "icon-spacing": 4,
+    "icon-size": 16,
+    "transition-duration": 250,
+    "modules": [
+        {
+            "type": "screenshare",
+            "tooltip": true,
+            "tooltip-icon-size": 24
+        },
+        {
+            "type": "audio-out",
+            "tooltip": true,
+            "tooltip-icon-size": 24
+        },
+        {
+            "type": "audio-in",
+            "tooltip": true,
+            "tooltip-icon-size": 24
+        }
+    ],
+    "ignore-monitor": true,
+    "ignore": [
+        {
+            "type": "audio-in",
+            "name": "cava"
+        },
+        {
+            "type": "screenshare",
+            "name": "obs"
+        }
+    ]
 },
 
     "custom/cacca": {
         "format" : "⏻ ",
-		"tooltip": false,
-		"menu": "on-click",
-		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
-		"menu-actions": {
-			"shutdown": "shutdown",
-			"reboot": "reboot",
-			"suspend": "systemctl suspend",
-			"hibernate": "systemctl hibernate"
-		}
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+        "menu-actions": {
+            "shutdown": "shutdown",
+            "reboot": "reboot",
+            "suspend": "systemctl suspend",
+            "hibernate": "systemctl hibernate"
+        }
     }
 }

@@ -1,27 +1,24 @@
 @import "colors.css";
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: "Google Sans Flex", "JetBrainsMono Nerd Font Propo";
+    font-family: "Iosevka Nerd Font Propo";
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
-window#waybar {
-    background-color: transparent;
+#window {
+    color: @on_surface;
 }
 
 window#waybar > box {
     background-color: @surface;
-    border-radius: 99px;
-    padding: 5 0;
-    border: 1px solid @outline_variant;
     color: @on-surface;
 }
 
 tooltip { 
     background: @surface_container;
     border: 1px solid @outline_variant;
-    border-radius: 24px;
+    border-radius: 0px;
 }
 
 tooltip label {
@@ -36,51 +33,39 @@ tooltip label {
 
 #workspaces {
 
-	background-color: @surface_container;
-	border-radius: 99px;
 	padding: 1px;
-	margin: 0 0 0 0px;
-	color: @on_surface_variant;
+	margin: 0 6 0 0px;
 }
 
 #workspaces button {
 	 padding: 0 6px;
     margin: 1px;
-    border-radius: 99px;
-    background-color: @surface_container_lowest;
-    color: @on_surface;
+    background-color: transparent;
+    color: @primary;
 }
 
 #workspaces button.empty {
 	 padding: 0 6px;
     margin: 1px;
-    border-radius: 99px;
     background-color: transparent;
     color: @on_surface;
 }
 
 #workspaces button:hover {
-    background-color: @surface_container_high;
-    color: @on_surface;
-    border-radius: 99px;
+   color: @secondary;
 }
 
 #workspaces button.urgent {
 
-	 background-color: @error;
-    color: @on_error;
-    border-radius: 99px;
+	color: @error;
 
 }
 
 #workspaces button.focused, #workspaces button.active {
 
-	 background-color: @primary;
-    border-radius: 99px;
-    color: @on_primary;
+	color: @primary;
+
 }
-
-
 
 
 #clock,
@@ -97,13 +82,12 @@ tooltip label {
     background-color: transparent;
     border-radius: 12px;
     color: @on_surface;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 #battery, #battery.charging, #battery.plugged{
-    font-size: 1rem;
-    background-color: @surface_container;
-    padding: 0 15 0 15;
+    font-size: 16px;
+    padding: 0 15 0 13;
     border-radius: 99px;
     margin: 0 0 0 0;
     color: @on_surface;
@@ -111,9 +95,9 @@ tooltip label {
 
 #bluetooth {
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 16px;
     color: @on_surface;
-    margin: 0 15px 0 15px;
+    margin: 0 5px 0 15px;
 }
 
 
@@ -124,20 +108,20 @@ tooltip label {
 #power-profiles-daemon.performance {
     background-color: transparent;
     color: @on_surface;
-    font-size: 1rem;
+    font-size: 16px;
     margin: 0 0 0 15px;
 }
 
 #power-profiles-daemon.balanced {
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 16px;
     color: @on_surface;
     margin: 0 0 0 15px;
 }
 
 #power-profiles-daemon.power-saver {
     background-color: transparent;
-    font-size: 1rem;
+    font-size: 16px;
     color: @on_surface;
     margin: 0 0 0 15px;
 }
@@ -146,13 +130,13 @@ tooltip label {
 #backlight {
     background-color: transparent;
     margin: 0 0 0 10;
-    font-size: 1rem;
+    font-size: 16px;
     color: @on_surface;
 }
 
 #network, #network.disconnected {
     background-color: transparent;
-    font-size: 1.3rem;
+    font-size: 16px;
     color: @on_surface;
     margin: 0 5 0 8px;
 }
@@ -160,14 +144,13 @@ tooltip label {
 
 #pulseaudio, #pulseaudio.muted {
     color: @on_surface;
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 
 
 #tray {
-    border-radius: 99px;
-    margin: 0 8 0 0;
+    padding: 0 0 0 10;
 }
 
 #tray > .passive {
@@ -181,7 +164,7 @@ tooltip label {
 
 #idle_inhibitor {
     background-color: transparent;
-  font-size: 1rem;
+  font-size: 16px;
     color: @on_surface;
   margin: 0 0 0 15px;
 }
@@ -189,22 +172,18 @@ tooltip label {
 #idle_inhibitor.activated {
     background-color: transparent;
     color: @on_surface;
-  font-size: 1rem;
+  font-size: 16px;
   margin: 0 0 0 15px;
 }
 
 
 #privacy {
-        padding: 0 10;
-        margin: 0 5 0 0px;
-	background-color: @surface_container;
-	border-radius: 99px;
 	color: @on_surface;
 }
 
 #privacy-item {
-    padding: 0 5 0 5px;
-    color: @on_surface;
+    margin: 0 0 0 5px;
+    color: @tertiary;
 }
 
 #privacy-item.screenshare {
@@ -217,23 +196,23 @@ tooltip label {
 }
 
 #custom-notification {
-  margin: 0 8 0 0px;
+  margin: 0 5 0 0px;
     color: @on_surface;
-  font-size: 1.3rem;
+  font-size: 16px;
 }
 
 #custom-power{
-  font-size: 1.5rem;
+  font-size: 20px;
     color: @on_surface;
-  margin: 0 15px  0 15px;
+  margin: 0 5px 0 15px;
 }
 
 #netciao {
 
-    font-size: 1rem;
+    font-size: 16px;
     padding: 0 5 0 0;
     color: @on_surface;
-    margin: 0 5 0 8px;
+    margin: 0 5 0 5px;
 }
 
 #powera {
@@ -248,10 +227,8 @@ tooltip label {
 #clocko{
 
 
-	background-color: @surface_container;
 	margin: 0 5;
 	padding: 0 15 0 15;
-	border-radius: 99px;
 	color: @on_surface;
 }
 
