@@ -7,10 +7,10 @@
     //"margin-left": 5,
     //"margin-right": 5,
     //"width": 1280, // Waybar width
-    //"spacing": 4, // Gaps between modules (4px)
+    "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/power",
+	"custom/power",
         "hyprland/workspaces",
         "hyprland/window"
     ],
@@ -19,7 +19,7 @@
     ],
     "modules-right": [
         "privacy",
-        "tray",
+	"group/tray-expander",
         "battery",
         "pulseaudio",
         "group/netciao",
@@ -140,14 +140,18 @@
             "critical": 15
         },
         "format": "{icon}",
-    "on-click": "kcmshell6 kcm_energyinfo",
-        "format-full": "{icon}",
+    "on-click": "gnome-power-statistics",
+        "format-full": "󰂅",
+        "format-discharging": "{icon}",
     "tooltip-format": "Battery: {capacity}%\n{timeTo}",
-        "format-charging": "󰃨",
+        "format-charging": "{icon}",
         "format-plugged": "",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
-        "format-icons": ["", "", "", "", ""]
+	"format-icons": {
+      "charging": ["󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"],
+      "default": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    }
     },
     "battery#bat2": {
         "bat": "BAT2"
@@ -167,10 +171,10 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         "format-wifi": "{icon}",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "format-ethernet": "󰊗",
+        "format-ethernet": "󰀂",
     "tooltip-format": "{essid}\n\nFrequency: {frequency}GHz\nStrength: {signalStrength}%\n\n{bandwidthUpBytes}   {bandwidthDownBytes}",
         "format-linked": "{ifname} (No IP) 󰊗",
-    "on-click": "kcmshell6 kcm_networkmanagement",
+    "on-click": "nm-connection-editor",
         "format-disconnected": "󰤭"
     },
     "pulseaudio": {
@@ -191,7 +195,7 @@
             "car": "",
             "default": ["", "", ""]
         },
-        "on-click": "kcmshell6 kcm_pulseaudio"
+        "on-click": "pavucontrol"
     },
     "custom/media": {
         "format": "{icon} {text}",
@@ -250,13 +254,12 @@
     },
 
 "bluetooth": {
-    "format": "{}",
-    "on-click": "kcmshell6 kcm_bluetooth",
-        "format-on": "󰂰",
-        "format-off": "󰂲",
-        "format-disabled": "󰂲",
-    "format-connected": "",
-    "format-connected-battery": "",
+    "format": "",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "format-connected": "󰂱",
+    "format-no-controller": "",
+    "on-click": "blueman-manager",
     // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
     "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\t{status}",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
@@ -286,7 +289,7 @@
 },
 
 "custom/power": {
-    "format": "󰣇",
+    "format": "",
     "tooltip": false,
     "on-click":"~/Scripts/rofi.sh"
 },
@@ -324,6 +327,25 @@
         }
     ]
 },
+
+"group/tray-expander": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 600,
+      "children-class": "tray-group-item"
+    },
+    "modules": ["custom/expand-icon", "tray"]
+  },
+
+  "custom/expand-icon": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/Scripts/powermenugrand.sh",
+    "on-scroll-up": "",
+    "on-scroll-down": "",
+    "on-scroll-left": "",
+    "on-scroll-right": ""
+  },
 
     "custom/cacca": {
         "format" : "⏻ ",
