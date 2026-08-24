@@ -108,7 +108,7 @@
     "clock": {
         // "timezone": "America/New_York",
     "format": "{:%a %d %b %H:%M}",
-    "on-click": "merkuro-calendar",
+    "on-click": "gnome-calendar",
         "tooltip-format": "<tt><big>{calendar}</big></tt>"
     },
 
