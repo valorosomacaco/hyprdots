@@ -12,7 +12,7 @@
 
 window#waybar > box {
     background-color: @surface;
-    color: @on-surface;
+    color: @on_surface;
 }
 
 tooltip { 
@@ -222,6 +222,6 @@ tooltip label {
 }
 
 #tray-expander {
-	color: @on-surface;
+	color: @on_surface;
 	margin-right: 15px;
 }
