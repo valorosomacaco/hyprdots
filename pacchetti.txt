@@ -19,6 +19,7 @@ cliphist
 decibels
 ex-vi-compat
 fastfetch
+file-roller
 firefox
 flatpak
 flatpak-builder
