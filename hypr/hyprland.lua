@@ -17,8 +17,8 @@ local colors = require("colors")
 
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 hl.monitor({
-    output   = "",
-    mode     = "preferred",
+    output   = "eDP-1",
+    mode     = "1920x1080@60",
     position = "auto",
     scale    = "1",
 })
@@ -30,7 +30,7 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal    = "kitty"
-local fileManager = "dolphin"
+local fileManager = "nautilus -w"
 local menu        = "~/Scripts/rofi.sh"
 
 
@@ -313,7 +313,7 @@ hl.bind(mainMod .. " + H", hl.dsp.exec_cmd("~/Scripts/rofihistory.sh"))
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("~/Scripts/waybar.sh"))
 hl.bind(mainMod .. " + X", hl.dsp.exec_cmd("~/Scripts/powermenugrand.sh"))
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("~/Scripts/walcommandgrand.sh"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("brave-origin"))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd("systemsettings"))
 hl.bind(mainMod .. " + TAB", hl.dsp.exec_cmd("Scripts/rofiwindow.sh"))
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
