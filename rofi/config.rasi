@@ -99,7 +99,7 @@ mode-switcher{
 button {
     padding:                     15px;
     border-radius:               0px;
-    background-color:            @surface-container;
+    background-color:            @surface-container-highest;
     text-color:                  @on-surface;
     cursor:                      pointer;
 }
