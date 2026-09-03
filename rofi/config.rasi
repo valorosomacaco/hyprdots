@@ -1,130 +1,195 @@
 @import "colors.rasi"
-
-* {
-    font: "Iosevka Nerd Font 16px";
+/*****----- Configuration -----*****/
+configuration {
+	modi:                       "drun,run,filebrowser,window";
+    show-icons:                 true;
+    display-drun:               "";
+    display-run:                "";
+    display-filebrowser:        "";
+    display-window:             "";
+	drun-display-format:        "{name}";
+	window-format:              "{w} · {c} · {t}";
 }
 
+/*****----- Global Properties -----*****/
+* {
+    font:                        "Iosevka Nerd Font Propo 16px";
+}
+
+/*****----- Main Window -----*****/
 window {
-    location: center;
-    anchor: center;
-    width: 700px;
+    /* properties for window widget */
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
     border: 1px;
     border-color: @outline-variant;
-    border-radius: 0px;
-    background-color: @surface-container;
-    padding: 15px;
+    width:                       700px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    /* properties for all widgets */
+    enabled:                     true;
+    border-radius:               0px;
+    cursor:                      "default";
+    background-color:            @surface-container;
 }
 
+/*****----- Main Box -----*****/
 mainbox {
-    background-color: transparent;
-    spacing: 8px;
-    children: [ inputbar, listview ];
+    enabled:                     true;
+    spacing:                     0px;
+    background-color:            transparent;
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listbox" ];
 }
 
+imagebox {
+    padding:                     20px;
+    background-color:            @surface-dim;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "dummy", "mode-switcher" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+dummy {
+    background-color:            transparent;
+}
+
+/*****----- Inputbar -----*****/
 inputbar {
-    background-color: @surface-container-highest;
-    border-radius: 0px;
-    padding: 8px 14px;
-    spacing: 10px;
-    children: [ entry ];
+    enabled:                     true;
+    spacing:                     10px;
+    padding:                     15px;
+    border-radius:               0px;
+    background-color:            @surface-container-highest;
+    text-color:                  @on-surface;
+    children:                    [ "entry" ];
 }
-
-prompt {
-    enabled: false;
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         "";
+    background-color:            inherit;
+    text-color:                  @on-surface;
 }
-
 entry {
-    background-color: transparent;
-    text-color: @on-surface-variant;
-    placeholder: "Search...";
-    placeholder-color: @on-surface-variant;
-    expand: true;
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  @on-surface;
+    cursor:                      text;
+    placeholder:                 "Search...";
+    placeholder-color:           inherit;
 }
 
+/*****----- Mode Switcher -----*****/
+mode-switcher{
+    enabled:                     true;
+    spacing:                     20px;
+    background-color:            transparent;
+}
+button {
+    padding:                     15px;
+    border-radius:               0px;
+    background-color:            @surface-container;
+    text-color:                  @on-surface;
+    cursor:                      pointer;
+}
+button selected {
+    background-color:            @primary;
+    text-color:                  @on-primary;
+}
+
+/*****----- Listview -----*****/
 listview {
-    background-color: transparent;
-    border: 0;
-    padding: 2px;
-    margin: 0;
-    spacing: 10px;
-    columns: 1;
-    lines: 8;
-    cycle: false;
-    dynamic: true;
-    fixed-height: false;
-    layout: vertical;
-    scrollbar: false;
+    enabled:                     true;
+    columns:                     1;
+    lines:                       7;
+    cycle:                       false;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      "default";
 }
 
+/*****----- Elements -----*****/
 element {
-    orientation: horizontal;
-    children: [ element-icon, element-text ];
-    background-color: @surface-container-high;
-    border-radius: 0px;
-    padding: 8px 12px;
-    margin: 0;
-    spacing: 10px;
-    text-color: @on-surface-variant;
+    enabled:                     true;
+    spacing:                     15px;
+    padding:                     8px;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      pointer;
 }
-
-element-icon {
-    background-color: transparent;
-    size: 1.1em;
-}
-
-element-text {
-    background-color: transparent;
-    text-color: inherit;
-    highlight: none;
-    expand: true;
-    vertical-align: 0.5;
-    format: "{text}";
-}
-
 element normal.normal {
-    background-color: transparent;
-    text-color: @on-surface-variant;
+    background-color:            inherit;
+    text-color:                  @on-surface;
 }
-
-element alternate.normal {
-    background-color: transparent;
-    text-color: @on-surface-variant;
+element normal.urgent {
+    background-color:            @error;
+    text-color:                  @on-error;
 }
-
-element selected.normal {
-    text-color: @primary;
-}
-
 element normal.active {
-    background-color: @primary;
-    text-color: @on-primary;
+    background-color:            inherit;
+    text-color:                  @on-surface;
 }
-
-element selected.active {
-    background-color: @primary;
-    text-color: @on-primary;
+element selected.normal {
+    background-color:            @surface-container-high;
+    text-color:                  @primary;
 }
-
-element normal.urgent,
 element selected.urgent {
-    background-color: @error;
-    text-color: @on-error;
+    background-color:            @surface-container-high;
+    text-color:                  @error;
+}
+element selected.active {
+    background-color:            @surface-container-high;
+    text-color:                  @primary;
+}
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        32px;
+    cursor:                      inherit;
+}
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
 }
 
-element alternate.urgent {
-    background-color: @error;
-    text-color: @on-error;
-}
-
-scrollbar {
-    enabled: false;
-}
-
+/*****----- Message -----*****/
 message {
-    background-color: transparent;
+    background-color:            transparent;
 }
-
 textbox {
-    background-color: @surface-container;
-    text-color: @error;
+    padding:                     15px;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @error;
 }

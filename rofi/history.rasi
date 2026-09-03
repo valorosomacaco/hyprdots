@@ -35,9 +35,9 @@ prompt {
 
 entry {
     background-color: transparent;
-    text-color: @on-surface-variant;
+    text-color: @on-surface;
     placeholder: "Search...";
-    placeholder-color: @on-surface-variant;
+    placeholder-color: @on-surface;
     expand: true;
 }
 
@@ -64,7 +64,7 @@ element {
     padding: 8px 12px;
     margin: 0;
     spacing: 10px;
-    text-color: @on-surface-variant;
+    text-color: @on-surface;
 }
 
 element-icon {
@@ -83,12 +83,12 @@ element-text {
 
 element normal.normal {
     background-color: transparent;
-    text-color: @on-surface-variant;
+    text-color: @on-surface;
 }
 
 element alternate.normal {
     background-color: transparent;
-    text-color: @on-surface-variant;
+    text-color: @on-surface;
 }
 
 element selected.normal {
