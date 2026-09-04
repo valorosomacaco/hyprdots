@@ -109,6 +109,7 @@ ttf-jetbrains-mono-nerd
 udiskie
 ufw
 vim
+vscodium
 vulkan-intel
 waybar
 wireplumber

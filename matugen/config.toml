@@ -91,3 +91,12 @@ colors_to_compare = [
 compare_to = "{{ colors.primary.default.hex }}"
 post_hook = 'nohup sudo -n papirus-folders -C {{ closest_color }} -u > /dev/null 2>&1 &'
 index = 1
+
+[templates.vscode-raw]
+input_path = '~/.config/matugen/templates/vscode-colors'
+output_path = '~/.cache/matugen/vscode-colors'
+
+[templates.vscode-json]
+input_path = '~/.config/matugen/templates/vscode-colors.json'
+output_path = '~/.cache/matugen/vscode-colors.json'
+
