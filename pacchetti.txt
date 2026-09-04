@@ -61,6 +61,7 @@ kindlegen
 kitty
 komikku
 libappindicator
+libreoffice-fresh
 linux
 linux-firmware
 localsend
@@ -109,6 +110,7 @@ switchboard-plug-network
 telegram-desktop
 texinfo
 timeshift
+torbrowser-launcher
 ttf-dejavu
 ttf-iosevka-nerd
 ttf-jetbrains-mono-nerd
