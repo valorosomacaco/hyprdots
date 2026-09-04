@@ -91,7 +91,7 @@
 
  "volume": {
             "device": "default",
-            "label": "",
+            "label": "",
             "slider": true,
 	    "show-per-app": false,
 	    "show-per-app-icon": true,
