@@ -1,6 +1,9 @@
 hakuneko-desktop-nightly
 kindlegen
+kirigami2
 qqc2-desktop-style5
 qt5ct-kde
+xwaylandvideobridge-git
+xwaylandvideobridge-git-debug
 yay-bin
 yay-bin-debug
