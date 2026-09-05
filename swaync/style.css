@@ -328,7 +328,12 @@
 	opacity: 1;
 }
 
-.widget-volume trough,
+.widget-volume trough {
+	background: @hover;
+	margin-left: 8px;
+	margin-right: 16px;
+	border-radius: 0px;  
+}
 .widget-backlight trough {
 	background: @hover;
 	margin-left: 8px;
