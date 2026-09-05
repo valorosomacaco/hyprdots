@@ -271,7 +271,7 @@
 
 .widget-buttons-grid {
 	border-radius: var(--border-radius);
-	padding: 5px 15px;
+	padding: 5px 5px;
 	margin-bottom: 5px;
 	background: @background-alt;
 	box-shadow: var(--shadow);
@@ -287,7 +287,7 @@
 }
 
 .widget-buttons-grid button > label {
-	font-family: "CaskaydiaCove Nerd Font Propo";
+	font-family: "Iosevka Nerd Font Propo";
 	font-size: 16px;
 	color: @text;
 }

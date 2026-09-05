@@ -52,6 +52,7 @@ hakuneko-desktop-nightly
 hypridle
 hyprland
 hyprlock
+hyprpicker
 hyprsunset
 intel-media-driver
 intel-media-sdk
