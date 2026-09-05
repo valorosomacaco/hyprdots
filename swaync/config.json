@@ -120,7 +120,7 @@
 		},
 		{
                     "label": "󰉦",
-                    "command": "swaync-client -t && sleep 0.1 && hyprpicker",
+                    "command": "swaync-client -t && sleep 0.1 && ~/Scripts/hyprpicker.sh",
 		    "type": "button"
 		},
 		
