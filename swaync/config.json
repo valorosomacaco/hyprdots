@@ -127,7 +127,7 @@
 		{
                     "label": "󰊖",
                     "command": "swaync-client -t && ~/Scripts/gamemode.sh",
-		    "type": "toggle"
+		    "type": "button"
 		}
       ]
     }
