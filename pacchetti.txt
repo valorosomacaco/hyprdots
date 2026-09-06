@@ -4,6 +4,7 @@ awww
 baobab
 base
 base-devel
+bind
 blueman
 bluez
 bluez-utils
@@ -17,6 +18,8 @@ calibre
 chaotic-keyring
 chaotic-mirrorlist
 cliphist
+cups
+cups-pdf
 decibels
 ex-vi-compat
 fastfetch
@@ -45,9 +48,14 @@ gst-plugins-bad
 gst-plugins-ugly
 gthumb
 gvfs-afc
+gvfs-dnssd
+gvfs-goa
 gvfs-gphoto2
 gvfs-mtp
+gvfs-nfs
+gvfs-onedrive
 gvfs-smb
+gvfs-wsdd
 hakuneko-desktop-nightly
 hypridle
 hyprland
@@ -98,6 +106,7 @@ qt5ct-kde
 qt6ct-kde
 reflector
 rofi
+samba
 scrcpy
 showtime
 slurp
