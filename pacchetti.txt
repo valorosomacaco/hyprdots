@@ -25,6 +25,8 @@ ex-vi-compat
 fastfetch
 file-roller
 firefox
+firewall-config
+firewalld
 flatpak
 flatpak-builder
 fwupd
@@ -125,7 +127,6 @@ ttf-dejavu
 ttf-iosevka-nerd
 ttf-jetbrains-mono-nerd
 udiskie
-ufw
 vim
 vscodium
 vulkan-intel
