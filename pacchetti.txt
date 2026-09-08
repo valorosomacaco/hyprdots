@@ -29,6 +29,7 @@ firewall-config
 firewalld
 flatpak
 flatpak-builder
+fluxcast-git
 fwupd
 git
 github-cli
