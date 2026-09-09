@@ -115,6 +115,7 @@ nautilus
 networkmanager
 nfs-utils
 nm-connection-editor
+nmap
 noto-fonts-cjk
 noto-fonts-emoji
 ntfsprogs
@@ -184,6 +185,7 @@ wget
 wine
 winetricks
 wireplumber
+wireshark-qt
 wl-clipboard
 xdg-desktop-portal-gtk
 xdg-desktop-portal-hyprland
@@ -192,3 +194,4 @@ xwaylandvideobridge-git
 xwaylandvideobridge-git-debug
 yay-bin
 yay-bin-debug
+zenmap
