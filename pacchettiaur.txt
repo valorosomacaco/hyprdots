@@ -1,3 +1,5 @@
+dangerzone-bin
+fluxcast-git
 hakuneko-desktop-nightly
 kindlegen
 kirigami2

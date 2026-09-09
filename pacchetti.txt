@@ -2,6 +2,7 @@ acsccid
 adw-gtk-theme
 android-tools
 arch-install-scripts
+audacity
 awww
 baobab
 base
@@ -23,6 +24,7 @@ chaotic-mirrorlist
 cliphist
 cups
 cups-pdf
+dangerzone-bin
 decibels
 docker
 dosfstools
@@ -40,6 +42,7 @@ flatpak-builder
 fluxcast-git
 foliate
 fwupd
+gimp
 git
 github-cli
 gnome-calculator
@@ -77,6 +80,7 @@ hyprlock
 hyprpicker
 hyprsunset
 inetutils
+inkscape
 intel-media-driver
 intel-media-sdk
 intel-ucode
@@ -102,6 +106,7 @@ man-db
 man-pages
 matugen
 mesa
+metadata-cleaner
 modemmanager
 mousai
 nautilus

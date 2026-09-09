@@ -1,0 +1,5 @@
+Flatseal	com.github.tchx84.Flatseal	2.4.1	stable	system
+KCC	io.github.ciromattia.kcc	11.0.1	stable	system
+Gear Lever	it.mijorus.gearlever	4.6.2	stable	system
+Meld	org.gnome.meld	3.24.0	stable	system
+KCalc	org.kde.kcalc	26.04.3	stable	system
