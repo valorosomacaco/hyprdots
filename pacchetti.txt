@@ -144,6 +144,7 @@ qemu-full
 qt5ct-kde
 qt6ct-kde
 reflector
+riseup-vpn
 rofi
 rog-control-center
 samba
