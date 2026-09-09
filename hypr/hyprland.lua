@@ -54,6 +54,7 @@ local menu        = "~/Scripts/rofi.sh"
  hl.exec_cmd("hypridle")
  hl.exec_cmd("hyprsunset")
  hl.exec_cmd("udiskie")
+ hl.exec_cmd("dex ~/.config/autostart/apparmor-notify.desktop")
  hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
 
 

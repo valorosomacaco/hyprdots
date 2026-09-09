@@ -1,6 +1,7 @@
 acsccid
 adw-gtk-theme
 android-tools
+apparmor
 arch-install-scripts
 audacity
 awww
@@ -26,6 +27,7 @@ cups
 cups-pdf
 dangerzone-bin
 decibels
+dex
 docker
 dosfstools
 elyprismlauncher
@@ -136,6 +138,7 @@ pipewire-pulse
 plocate
 polkit-gnome
 power-profiles-daemon
+python-notify2
 qbittorrent
 qemu-full
 qt5ct-kde
@@ -162,6 +165,7 @@ telegram-desktop
 texinfo
 thunderbird
 timeshift
+tk
 torbrowser-launcher
 ttf-dejavu
 ttf-iosevka-nerd
