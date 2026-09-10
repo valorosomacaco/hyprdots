@@ -1,0 +1,189 @@
+[bar.default]
+concave_edge_corners = false
+end = [ "privacy", "tray", "network", "bluetooth", "volume", "brightness", "battery", "control-center" ]
+font_weight = 700
+margin_ends = 0
+radius = 0
+start = [ "launcher", "workspaces", "active_window" ]
+thickness = 28
+widget_spacing = 10
+
+[calendar]
+
+[control_center]
+sidebar_section = "none"
+
+    [control_center.calendar]
+    show_events_card = false
+    show_week_numbers = true
+
+[desktop_widgets]
+enabled = false
+
+[dock]
+auto_hide = true
+concave_edge_corners = false
+enabled = true
+radius = 0
+reserve_space = false
+show_dots = true
+
+[hooks]
+colors_changed = "sh -c 'pkill -f /usr/lib/xdg-desktop-portal-gtk'"
+wallpaper_changed = "sh -c 'pkill -f /usr/lib/xdg-desktop-portal-gtk'"
+
+[idle]
+behavior_order = [ "lock", "screen-off", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = true
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = true
+    timeout = 660.0
+
+[location]
+address = "Cosenza Italy"
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@eDP-1", "lockscreen-widget-0000000000000001", "lockscreen-widget-0000000000000002" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 898.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000001]
+    box_height = 128.0
+    box_width = 256.0
+    cx = 960.0
+    cy = 444.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000001.settings]
+        background = false
+        format = "{:%a %d %b}"
+
+    [lockscreen_widgets.widget.lockscreen-widget-0000000000000002]
+    box_height = 224.0
+    box_width = 336.0
+    cx = 960.0
+    cy = 332.0
+    output = "eDP-1"
+    placement_height = 1080.0
+    placement_width = 1920.0
+    rotation = 0.0
+    type = "clock"
+
+        [lockscreen_widgets.widget.lockscreen-widget-0000000000000002.settings]
+        background = false
+
+[nightlight]
+enabled = true
+
+[shell]
+corner_radius_scale = 0.0
+font_family = "Iosevka NF"
+polkit_agent = true
+
+    [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_control_center = true
+    session_placement = "floating"
+    wallpaper_placement = "floating"
+
+[theme]
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "m3-content"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "hyprland", "kcolorscheme", "kitty" ]
+    community_ids = [ "gimp", "inkscape", "vscode", "obs", "papirus-icons" ]
+
+[wallpaper]
+directory = "/home/ale/Pictures/Wallpapers"
+
+    [wallpaper.default]
+    path = "/home/ale/Pictures/Wallpapers/a_clock_and_vase_with_flowers_on_a_table.png"
+
+    [wallpaper.last]
+    path = "/home/ale/Pictures/Wallpapers/a_clock_and_vase_with_flowers_on_a_table.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/ale/Pictures/Wallpapers/a_clock_and_vase_with_flowers_on_a_table.png"
+
+[widget.active_window]
+title_scroll = "on_hover"
+
+[widget.battery]
+show_label = false
+
+[widget.brightness]
+show_label = false
+
+[widget.clock]
+format = "{:%a %d %b %H:%M}"
+
+[widget.launcher]
+glyph = "apps-filled"
+
+[widget.media]
+hide_when_no_media = true
+show_progress = true
+
+[widget.network]
+show_label = false
+
+[widget.privacy]
+hide_inactive = true
+
+[widget.tray]
+drawer = true
+
+[widget.volume]
+show_label = false
+
+[widget.workspaces]
+style = "minimal"
