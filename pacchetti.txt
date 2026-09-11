@@ -87,6 +87,7 @@ intel-media-driver
 intel-media-sdk
 intel-ucode
 ipp-usb
+jq
 keepassxc
 kindlegen
 kitty
