@@ -16,7 +16,7 @@ chosen="${images[RANDOM % ${#images[@]}]}"
 
 awww img "$chosen" --transition-type="random" --transition-fps="60"
 pkill -f /usr/lib/xdg-desktop-portal-gtk
-matugen --prefer darkness --show-colors -t scheme-tonal-spot image "$chosen"
+matugen --prefer darkness -t scheme-smart image "$chosen"
 pkill swayosd-server
 swayosd-server &
 disown

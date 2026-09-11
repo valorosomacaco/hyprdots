@@ -116,11 +116,29 @@ adw-alert-dialog {
     color: {{colors.on_surface.default.hex}} !important;
 }
 
-/* Info bars */
-infobar,
-banner,
-.infobar {
-    background-color: {{colors.surface.default.hex}} !important;
-    color: {{colors.on_surface.default.hex}} !important;
+toast,
+.osd,
+AdwToastWidget {
+    background-color: {{colors.surface_container_highest.default.hex}};
+    color: {{colors.on_surface.default.hex}};
+}
+toast label,
+AdwToastWidget label {
+    color: {{colors.on_surface.default.hex}};
+}
+
+toast button:not(.circular),
+AdwToastWidget button:not(.circular) {
+    background-color: transparent;
+    color: {{colors.primary.default.hex}};
+}
+toast button:not(.circular):hover,
+AdwToastWidget button:not(.circular):hover {
+    background-color: {{colors.surface_container.default.hex}};
+}
+
+toast button.circular.flat,
+AdwToastWidget button.circular.flat {
+    color: {{colors.on_surface.default.hex}};
 }
 

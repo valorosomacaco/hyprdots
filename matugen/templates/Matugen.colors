@@ -34,8 +34,8 @@ IntensityAmount=0
 IntensityEffect=0
 
 [Colors:Button]
-BackgroundAlternate={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
-BackgroundNormal={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
+BackgroundAlternate={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+BackgroundNormal={{colors.surface_container_high.default.red}},{{colors.surface_container_high.default.green}},{{colors.surface_container_high.default.blue}}
 DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 ForegroundActive={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
@@ -48,21 +48,7 @@ ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.gre
 ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
 
 [Colors:Complementary]
-BackgroundAlternate={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
-BackgroundNormal={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
-DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
-DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
-ForegroundActive={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
-ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
-ForegroundLink={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
-ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
-ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
-ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
-ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
-ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
-
-[Colors:Header]
-BackgroundAlternate={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
+BackgroundAlternate={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
 BackgroundNormal={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
 DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
@@ -75,9 +61,23 @@ ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.g
 ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
 ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
 
-[Colors:Header][Inactive]
+[Colors:Header]
 BackgroundAlternate={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
-BackgroundNormal={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
+BackgroundNormal={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
+DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
+ForegroundActive={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundInactive={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
+ForegroundLink={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundNegative={{colors.error.default.red}},{{colors.error.default.green}},{{colors.error.default.blue}}
+ForegroundNeutral={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+ForegroundNormal={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
+ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.green}},{{colors.tertiary.default.blue}}
+ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
+
+[Colors:Header][Inactive]
+BackgroundAlternate={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
+BackgroundNormal={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
 DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 ForegroundActive={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
@@ -90,7 +90,7 @@ ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.gre
 ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
 
 [Colors:Selection]
-BackgroundAlternate={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
+BackgroundAlternate={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
 BackgroundNormal={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
@@ -104,8 +104,8 @@ ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.gre
 ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
 
 [Colors:Tooltip]
-BackgroundAlternate={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
-BackgroundNormal={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
+BackgroundAlternate={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
+BackgroundNormal={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
 DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 ForegroundActive={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
@@ -118,7 +118,7 @@ ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.gre
 ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
 
 [Colors:View]
-BackgroundAlternate={{colors.surface_container_low.default.red}},{{colors.surface_container_low.default.green}},{{colors.surface_container_low.default.blue}}
+BackgroundAlternate={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
 BackgroundNormal={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
 DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
@@ -133,7 +133,7 @@ ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.gr
 
 [Colors:Window]
 BackgroundAlternate={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
-BackgroundNormal={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
+BackgroundNormal={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
 DecorationFocus={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 DecorationHover={{colors.inverse_primary.default.red}},{{colors.inverse_primary.default.green}},{{colors.inverse_primary.default.blue}}
 ForegroundActive={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
@@ -146,12 +146,10 @@ ForegroundPositive={{colors.tertiary.default.red}},{{colors.tertiary.default.gre
 ForegroundVisited={{colors.secondary.default.red}},{{colors.secondary.default.green}},{{colors.secondary.default.blue}}
 
 [WM]
-activeBackground={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
+activeBackground={{colors.surface_container.default.red}},{{colors.surface_container.default.green}},{{colors.surface_container.default.blue}}
 activeBlend={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
 activeForeground={{colors.on_surface.default.red}},{{colors.on_surface.default.green}},{{colors.on_surface.default.blue}}
-inactiveBackground={{colors.background.default.red}},{{colors.background.default.green}},{{colors.background.default.blue}}
+inactiveBackground={{colors.surface.default.red}},{{colors.surface.default.green}},{{colors.surface.default.blue}}
 inactiveBlend={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
 inactiveForeground={{colors.on_surface_variant.default.red}},{{colors.on_surface_variant.default.green}},{{colors.on_surface_variant.default.blue}}
 activeFont=Iosevka Nerd Font,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1,,0,0
-
-
