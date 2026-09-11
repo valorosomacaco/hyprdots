@@ -129,7 +129,7 @@ AdwToastWidget label {
 
 toast button:not(.circular),
 AdwToastWidget button:not(.circular) {
-    background-color: transparent;
+    background-color: {{colors.surface_container_high.default.hex}};
     color: {{colors.primary.default.hex}};
 }
 toast button:not(.circular):hover,
