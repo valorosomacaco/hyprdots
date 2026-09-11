@@ -142,6 +142,7 @@
             "critical": 15
         },
         "format": "{icon}",
+	"interval": 5,
     "on-click": "gnome-power-statistics",
         "format-full": "󰂅",
         "format-discharging": "{icon}",
