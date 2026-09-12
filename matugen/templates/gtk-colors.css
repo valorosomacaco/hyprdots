@@ -142,3 +142,7 @@ AdwToastWidget button.circular.flat {
     color: {{colors.on_surface.default.hex}};
 }
 
+button.suggested-action:active {
+    background-color: @accent_bg_color;
+    box-shadow: inset 0 0 0 0 rgba(0, 0, 0, 0.15);
+}
