@@ -99,7 +99,7 @@ element selected.normal {
 }
 
 element normal.active {
-    text-color: @on-surface;
+    text-color: @tertiary;
 }
 
 element selected.active {

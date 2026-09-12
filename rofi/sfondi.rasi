@@ -69,7 +69,7 @@ element {
 
 element-icon {
     background-color: transparent;
-    size: 310px;
+    size: 312px;
     horizontal-align: 0.5;
     vertical-align: 0.5;
 }
