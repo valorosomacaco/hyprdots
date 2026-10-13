@@ -1,0 +1,24 @@
+@import url("file:///home/ale/.config/waybar/colors.css");
+window#osd {
+    border-radius: 99px;
+    background-color: @surface_container;
+    border: 1px solid @outline_variant;
+    /* Add other styling properties as needed */
+}
+
+label {
+  font-size: 16pt;
+  color: @on_surface;
+}
+
+image {
+  color: @on_surface;
+}
+
+progressbar {
+  background-color: @surface_container_high;
+}
+
+progress {
+  background-color: @on_surface;
+}

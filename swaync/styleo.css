@@ -1,0 +1,158 @@
+/* =========================================================
+   swaync — style.css
+   Nota: GTK CSS, niente backdrop-filter. Sfocato via compositor:
+   in hyprland.conf ->
+     layerrule = blur, swaync-control-center
+     layerrule = blur, swaync-notification-window
+
+   I selettori .widget-* seguono lo schema ufficiale di swaync;
+   se la tua versione differisce leggermente, apri l'inspector
+   GTK con: GTK_DEBUG=interactive swaync
+   ========================================================= */
+
+* {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+}
+
+.control-center {
+    background-color: rgba(24, 22, 31, 0.74);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 32px;
+    padding: 18px;
+}
+
+/* ---------- header / title ---------- */
+.widget-title {
+    color: #eae3f2;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0 0 6px 0;
+}
+
+.widget-title > button {
+    background-color: #2b2735;
+    color: #b3abc4;
+    border-radius: 999px;
+    padding: 5px 14px;
+    font-size: 10px;
+}
+
+.widget-title > button:hover {
+    background-color: #332f40;
+}
+
+/* ---------- do-not-disturb ---------- */
+.widget-dnd {
+    padding: 8px 0;
+    color: #eae3f2;
+}
+
+.widget-dnd > switch {
+    border-radius: 999px;
+    background-color: #493a80;
+    min-width: 40px;
+    min-height: 22px;
+}
+
+.widget-dnd > switch:checked {
+    background-color: #c9b8ff;
+}
+
+.widget-dnd > switch slider {
+    border-radius: 999px;
+    background-color: #eae3f2;
+}
+
+/* ---------- quick toggles ---------- */
+.widget-buttons-grid {
+    padding: 8px 0;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button {
+    background-color: #2b2735;
+    color: #b3abc4;
+    border-radius: 16px;
+    min-width: 60px;
+    min-height: 60px;
+    font-size: 16px;
+}
+
+.widget-buttons-grid > flowbox > flowboxchild > button:hover {
+    background-color: #332f40;
+}
+
+/* ---------- volume / backlight slider ---------- */
+.widget-volume,
+.widget-backlight {
+    padding: 6px 0;
+}
+
+.widget-volume > box > label,
+.widget-backlight > box > label {
+    color: #b3abc4;
+    min-width: 24px;
+}
+
+trough {
+    background-color: #2b2735;
+    border-radius: 999px;
+    min-height: 10px;
+}
+
+scale highlight {
+    background-color: #c9b8ff;
+    border-radius: 999px;
+}
+
+scale slider {
+    background-color: #eae3f2;
+    border-radius: 999px;
+    min-width: 16px;
+    min-height: 16px;
+}
+
+/* ---------- notification list ---------- */
+.notification-row {
+    padding: 3px 0;
+}
+
+.notification {
+    background-color: #2b2735;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+.notification .summary {
+    color: #eae3f2;
+    font-size: 11.5px;
+    font-weight: 700;
+}
+
+.notification .body {
+    color: #b3abc4;
+    font-size: 10.5px;
+}
+
+.notification .time {
+    color: #847c96;
+    font-size: 9px;
+}
+
+.notification .close-button {
+    background-color: #332f40;
+    border-radius: 999px;
+    min-width: 20px;
+    min-height: 20px;
+}
+
+/* ---------- notifiche flottanti (fuori dal control-center) ---------- */
+#notification-window {
+    background: transparent;
+}
+
+.floating-notifications .notification {
+    background-color: rgba(24, 22, 31, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+

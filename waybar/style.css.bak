@@ -1,0 +1,276 @@
+@import "colors.css";
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: "Google Sans Flex", "Iosevka Nerd Font Propo";
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#window {
+    color: @on_surface;
+    border: 1px solid @outline_variant;
+    background-color: @surface;
+    margin-left: 5px;
+    margin-right: 5px;
+    padding: 0 10px;
+    border-radius: 99px;
+}
+
+window#waybar {
+    background-color: transparent;
+    color: @on_surface;
+}
+
+tooltip { 
+    background: @surface_container;
+    border: 1px solid @outline_variant;
+    border-radius: 24px;
+}
+
+tooltip label {
+	color: @on_surface;
+	padding: 3px;
+}
+
+#tray menu {
+	background-color: @surface;
+	padding: 6px;
+}
+
+#workspaces {
+
+	background-color: @surface;
+        border: 1px solid @outline_variant;
+	border-radius: 99px;
+	padding: 1px;
+	margin: 0 0 0 0px;
+	color: @on_surface_variant;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 1px;
+    border-radius: 99px;
+    background-color: @surface;
+    color: @primary;
+}
+
+#workspaces button.empty {
+    padding: 0 6px;
+    margin: 1px;
+    border-radius: 99px;
+    background-color: transparent;
+    color: @on_surface;
+}
+
+#workspaces button:hover {
+    background-color: @surface_container_high;
+    border-radius: 99px;
+}
+
+#workspaces button.urgent {
+
+    background-color: @error;
+    color: @on_error;
+    border-radius: 99px;
+
+}
+
+#workspaces button.focused, #workspaces button.active {
+
+    background-color: @primary;
+    border-radius: 99px;
+    color: @on_primary;
+}
+
+
+
+
+#clock,
+#battery,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#idle_inhibitor,
+#power-profiles-daemon,
+
+
+#clock {
+    color: @on_surface;
+    border-radius: 99px;
+}
+
+#battery, #battery.charging, #battery.plugged{
+    border-radius: 99px;
+    color: @on_surface;
+    background-color: @surface;
+    margin-right: 5px;
+    border: 1px solid @outline_variant;
+    padding: 0 10px;
+    border-radius: 99px;
+}
+
+#bluetooth {
+    color: @on_surface;
+    background-color: @surface;
+    margin: 0 6px;
+    border-radius: 99px;
+}
+
+
+
+#power-profiles-daemon {
+    color: @on_surface;
+    margin-right: 5px;
+    border: 1px solid @outline_variant;
+    background-color: @surface;
+    padding: 0 10px;
+    border-radius: 99px;
+}
+
+#power-profiles-daemon.performance {
+}
+
+#power-profiles-daemon.balanced {
+}
+
+#power-profiles-daemon.power-saver {
+}
+
+
+#backlight {
+    color: @on_surface;
+    background-color: @surface;
+    margin: 0 6px;
+}
+
+#network, #network.disconnected {
+    color: @on_surface;
+    background-color: @surface;
+    margin: 0 6px;
+    border-radius: 99px;
+}
+
+
+#pulseaudio, #pulseaudio.muted {
+    color: @on_surface;
+    background-color: @surface;
+    margin: 0 6px;
+    border-radius: 99px;
+}
+
+
+
+#tray {
+    margin-right: 5px;
+    color: @on_surface;
+    border: 1px solid @outline_variant;
+    background-color: @surface;
+    padding: 0 10px;
+    border-radius: 99px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#idle_inhibitor {
+    margin-left: 5px;
+    color: @on_surface;
+    border: 1px solid @outline_variant;
+    background-color: @surface;
+    padding: 0 10px;
+    border-radius: 99px;
+}
+
+#idle_inhibitor.activated {
+    background-color: @surface;
+    border: 1px solid @outline_variant;
+    padding: 0 10px;
+    border-radius: 99px;
+    margin-left: 5px;
+    color: @on_surface;
+}
+
+
+#privacy {
+	color: @on_surface;
+        background-color: @surface;
+        border: 1px solid @outline_variant;
+        padding: 0 10px;
+        border-radius: 99px;
+}
+
+#privacy-item {
+    color: @tertiary;
+    padding: 0 5px;
+}
+
+#privacy-item.screenshare {
+}
+
+#privacy-item.audio-in {
+}
+
+#privacy-item.audio-out {
+}
+
+#custom-notification {
+    color: @on_surface;
+    border: 1px solid @outline_variant;
+    background-color: @surface;
+    padding: 0 12px;
+    border-radius: 99px;
+}
+
+#custom-power{
+    color: @on_surface;
+    background-color: @surface;
+    padding: 0 10px;
+    border: 1px solid @outline_variant;
+    border-radius: 99px;
+    margin-right: 5px;
+}
+
+#netciao {
+
+    color: @on_surface;
+    background-color: @surface;
+    border: 1px solid @outline_variant;
+    padding: 0 10px;
+    border-radius: 99px;
+    margin-right: 5px;
+}
+
+#powera {
+
+	
+	background-color: @surface;
+	border-radius: 99px;
+	color: @on_surface;
+
+}
+
+#clocko{
+
+
+	color: @on_surface;
+        background-color: @surface;
+        padding: 0 10px;
+        border-radius: 99px;
+        border: 1px solid @outline_variant;
+}
+
+#rogo {
+}
+
+#tray-expander {
+	color: @on_surface;
+	margin-right: 15px;
+}
